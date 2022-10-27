@@ -1,3 +1,4 @@
+require 'pry'
 require './lib/student'
 
 RSpec.describe Student do

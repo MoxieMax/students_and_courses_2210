@@ -1,11 +1,13 @@
 class Student
   attr_reader :name,
               :age,
-              :scores
+              :scores,
+              :total
   def initialize(attributes)
     @name = attributes.fetch(:name)
     @age = attributes.fetch(:age)
     @scores = []
+    @total = nil
   end
   
   def log_score(score)
@@ -13,6 +15,6 @@ class Student
   end
   
   def grade
-    @scores.sum.to_f / @scores.count
+    @total = (@scores.sum.to_f / @scores.count)
   end
 end
